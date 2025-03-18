@@ -1,0 +1,27 @@
+﻿<Page x:Class="Client.Download_model"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Client"
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="450"
+      Title="Download_model">
+
+    <Grid Background="White">
+        <TextBlock HorizontalAlignment="Left" Margin="30,30,0,0" TextWrapping="Wrap"
+            VerticalAlignment="Top" FontSize="20" FontWeight="Bold" Text="모델 다운로드"/>
+        <ListView x:Name="LV_modelList" HorizontalAlignment="Center" VerticalAlignment="Top" Width="390" Margin="0,90,0,0" Height="320">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <TextBlock Text="{Binding ModelId}" FontSize="18"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Button x:Name="btn_dir_sel" FontSize="16" Width="100" Height="30" Content="경로 선택" HorizontalAlignment="Left" Margin="30,440,0,0" VerticalAlignment="Top" Click="btn_dir_sel_Click"/>
+        <TextBlock x:Name="Tblock_dir" Text="C:\Users\LMS\Documents\" FontSize="16" Width="265" HorizontalAlignment="Left" Margin="155,442,0,0" TextWrapping="NoWrap" VerticalAlignment="Top"/>
+        <Button x:Name="btn_download" FontSize="16" Width="100" Height="40" Content="다운로드" HorizontalAlignment="Left" Margin="320,500,0,0" VerticalAlignment="Top" Click="btn_download_Click"/>
+    </Grid>
+</Page>

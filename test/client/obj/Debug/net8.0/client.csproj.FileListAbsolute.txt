@@ -1,0 +1,14 @@
+C:\Users\LMS\Desktop\CNN 이미지 분류 딥러닝 모델 제작 서비스\CustomVVision\test\client\bin\Debug\net8.0\client.exe
+C:\Users\LMS\Desktop\CNN 이미지 분류 딥러닝 모델 제작 서비스\CustomVVision\test\client\bin\Debug\net8.0\client.deps.json
+C:\Users\LMS\Desktop\CNN 이미지 분류 딥러닝 모델 제작 서비스\CustomVVision\test\client\bin\Debug\net8.0\client.runtimeconfig.json
+C:\Users\LMS\Desktop\CNN 이미지 분류 딥러닝 모델 제작 서비스\CustomVVision\test\client\bin\Debug\net8.0\client.dll
+C:\Users\LMS\Desktop\CNN 이미지 분류 딥러닝 모델 제작 서비스\CustomVVision\test\client\bin\Debug\net8.0\client.pdb
+C:\Users\LMS\Desktop\CNN 이미지 분류 딥러닝 모델 제작 서비스\CustomVVision\test\client\obj\Debug\net8.0\client.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\LMS\Desktop\CNN 이미지 분류 딥러닝 모델 제작 서비스\CustomVVision\test\client\obj\Debug\net8.0\client.AssemblyInfoInputs.cache
+C:\Users\LMS\Desktop\CNN 이미지 분류 딥러닝 모델 제작 서비스\CustomVVision\test\client\obj\Debug\net8.0\client.AssemblyInfo.cs
+C:\Users\LMS\Desktop\CNN 이미지 분류 딥러닝 모델 제작 서비스\CustomVVision\test\client\obj\Debug\net8.0\client.csproj.CoreCompileInputs.cache
+C:\Users\LMS\Desktop\CNN 이미지 분류 딥러닝 모델 제작 서비스\CustomVVision\test\client\obj\Debug\net8.0\client.dll
+C:\Users\LMS\Desktop\CNN 이미지 분류 딥러닝 모델 제작 서비스\CustomVVision\test\client\obj\Debug\net8.0\refint\client.dll
+C:\Users\LMS\Desktop\CNN 이미지 분류 딥러닝 모델 제작 서비스\CustomVVision\test\client\obj\Debug\net8.0\client.pdb
+C:\Users\LMS\Desktop\CNN 이미지 분류 딥러닝 모델 제작 서비스\CustomVVision\test\client\obj\Debug\net8.0\client.genruntimeconfig.cache
+C:\Users\LMS\Desktop\CNN 이미지 분류 딥러닝 모델 제작 서비스\CustomVVision\test\client\obj\Debug\net8.0\ref\client.dll
