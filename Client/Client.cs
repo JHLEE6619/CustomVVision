@@ -22,7 +22,7 @@ namespace Client
 
         public enum MsgId : byte
         {
-            JOIN, LOGIN, CREATE_MODEL, TEST_MODEL, DOWNLOAD_MODEL
+            JOIN, LOGIN, CREATE_MODEL, SHOW_MODEL_LIST, TEST_MODEL, DOWNLOAD_MODEL
         }
 
         public void ConnectServer()
@@ -59,39 +59,18 @@ namespace Client
 
         private async Task Handler(Receive_Message msg)
         {
-
             switch (msg.MsgId)
             {
-                case (byte)MsgId.LOGIN: // 할당
+                case (byte)MsgId.SHOW_MODEL_LIST: // 할당
                     break;
-                case (byte)MsgId.ADD_USER: // Add
+                case (byte)MsgId.TEST_MODEL: // 할당
                     break;
-                
+                case (byte)MsgId.DOWNLOAD_MODEL: // 할당
+                    break;
             }
 
         }
 
-
-        private void Receive_userList(List<string> connectedUser)
-        {
-            foreach (var userId in connectedUser)
-            {
-                Add_user(userId);
-            }
-        }
-
-        private void Add_user(string userId)
-        {
-            User user = new() { UserId = userId };
-
-            main.Dispatcher.BeginInvoke(() =>
-            {
-                lock (thisLock)
-                {
-                    Global_Data.UserList.Add(user);
-                }
-            });
-        }
 
         private byte[] SerializeToJson(Send_Message msg)
         {

@@ -61,11 +61,6 @@ class EchoServerProtocol(asyncio.Protocol):
                 # 파일 전송 함수
                 return
 
-
-
-
-
-
 async def main():
     # 저수준 API를 사용하기 위해 현재 이벤트 루프를 가져온다
     loop = asyncio.get_running_loop()
