@@ -9,6 +9,8 @@ namespace Client.Models
     public class Send_Message
     {
         public byte MsgId { get; set; }
-        public string UserId {  get; set; }
+        public User UserInfo { get; set; }
+        public Model modelInfo { get; set; }
+        public Image imageInfo { get; set; }
     }
 }

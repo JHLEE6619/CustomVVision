@@ -9,7 +9,9 @@ namespace Client.Models
     public class Model
     {
         public string ModelId { get; set; }
-        public bool classification { get; set; }
-        public byte epoch { get; set; }
+        public bool Classification { get; set; }
+        public byte Epoch { get; set; }
+        public uint ImageWidth { get; set; }
+        public uint ImageHeight { get; set; }
     }
 }

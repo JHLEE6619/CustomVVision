@@ -12,3 +12,7 @@ C:\Users\LMS\Desktop\CNN 이미지 분류 딥러닝 모델 제작 서비스\Cust
 C:\Users\LMS\Desktop\CNN 이미지 분류 딥러닝 모델 제작 서비스\CustomVVision\test\client\obj\Debug\net8.0\client.pdb
 C:\Users\LMS\Desktop\CNN 이미지 분류 딥러닝 모델 제작 서비스\CustomVVision\test\client\obj\Debug\net8.0\client.genruntimeconfig.cache
 C:\Users\LMS\Desktop\CNN 이미지 분류 딥러닝 모델 제작 서비스\CustomVVision\test\client\obj\Debug\net8.0\ref\client.dll
+C:\Users\LMS\Desktop\CNN 이미지 분류 딥러닝 모델 제작 서비스\CustomVVision\test\client\obj\Debug\net8.0\client.sourcelink.json
+C:\Users\LMS\Desktop\CNN 이미지 분류 딥러닝 모델 제작 서비스\CustomVVision\test\client\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\LMS\Desktop\CNN 이미지 분류 딥러닝 모델 제작 서비스\CustomVVision\test\client\obj\Debug\net8.0\client.csproj.AssemblyReference.cache
+C:\Users\LMS\Desktop\CNN 이미지 분류 딥러닝 모델 제작 서비스\CustomVVision\test\client\obj\Debug\net8.0\client.csproj.Up2Date

@@ -1,7 +1,17 @@
-#loop.create_server()를 이용한 TCP 에코 서버 프로그램
-#한번만 서비스한다
-
 import asyncio
+import orjson
+import DBC
+from enum import IntEnum, auto
+
+# while문이 없어도 계속해서 read하는 비동기 멀티스레드 서버
+
+class Msg(IntEnum):
+    JOIN = 0
+    LOGIN = auto()
+    CREATE_MODEL = auto()
+    SHOW_MODEL_LIST = auto()
+    TEST_MODEL = auto()
+    DOWNLOAD_MODEL = auto()
 
 #이벤트 콜백을 정의하는 프로토콜 클래스
 class EchoServerProtocol(asyncio.Protocol):
@@ -18,12 +28,42 @@ class EchoServerProtocol(asyncio.Protocol):
     def data_received(self, data):
         message = data.decode()
         print('Data received: {!r}'.format(message))
+        msg = orjson.loads(message)  # 메세지 받을때 딕셔너리로 역직렬화
+        self.handler(msg)
+        # print('Send: {!r}'.format(message))
+        # self.transport.write(data) #데이터 송신
+        #
+        # print('Close the client socket')
+        # self.transport.close() #연속 서비스를 원하면 이 문장 삭제
 
-        print('Send: {!r}'.format(message))
-        self.transport.write(data) #데이터 송신
+    def handler(self, msg):
+        dbc = DBC.DBC()
+        msgId = msg["msgId"]
+        match msgId:
+            case Msg.JOIN:
+                dbc.join(msg["UserInfo"])
+                return
+            case Msg.LOGIN:
+                dbc.login(msg["userInfo"])
+                return
+            case Msg.CREATE_MODEL:
+                dbc.add_modelInfo(msg)
+                return
+            case Msg.SHOW_MODEL_LIST:
+                dbc.select_modelList(msg["userInfo"]["userId"])
+            case Msg.TEST_MODEL:
+                dbc.select_modelDir(msg["modelInfo"]["modelId"])
+                # 파일 수신 함수
+                # 테스트 하는 함수
+                return
+            case Msg.DOWNLOAD_MODEL:
+                dbc.select_modelList(msg["userInfo"]["userId"])
+                # 파일 전송 함수
+                return
 
-        print('Close the client socket')
-        self.transport.close() #연속 서비스를 원하면 이 문장 삭제
+
+
+
 
 
 async def main():

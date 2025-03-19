@@ -9,7 +9,7 @@ namespace Client.Models
     public class Image
     {
         public string ModelId { get; set; }
-        public object Img { get; set; } // 자료형?
+        // public object Img { get; set; } // 자료형?
         public string Label { get; set; } = "새 레이블";
     }
 }
