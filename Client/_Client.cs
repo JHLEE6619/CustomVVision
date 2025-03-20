@@ -12,11 +12,13 @@ using Newtonsoft.Json;
 
 namespace Client
 {
-    public class Client
+    public static class _Client
     {
-        static TcpClient tc = new TcpClient("127.0.0.1", 10000);
-        NetworkStream stream = tc.GetStream();
-        private readonly object thisLock = new();
+        //static TcpClient tc = new TcpClient("127.0.0.1", 10000);
+        static TcpClient tc = new();
+        //static NetworkStream stream = tc.GetStream();
+        static NetworkStream stream;
+        private static readonly object thisLock = new();
 
         public static string UserId { get; set; }
 
@@ -25,14 +27,14 @@ namespace Client
             JOIN, LOGIN, CREATE_MODEL, SHOW_MODEL_LIST, TEST_MODEL, DOWNLOAD_MODEL
         }
 
-        public void ConnectServer()
+        public static void ConnectServer()
         {
             Task.Run(() => Receive_msg(tc));
         }
 
 
 
-        private async Task Receive_msg(TcpClient tc)
+        private static async Task Receive_msg(TcpClient tc)
         {
             Receive_Message msg = new();
             byte[] buf = new byte[5000];
@@ -57,7 +59,7 @@ namespace Client
 
         //
 
-        private async Task Handler(Receive_Message msg)
+        private static async Task Handler(Receive_Message msg)
         {
             switch (msg.MsgId)
             {
@@ -72,14 +74,14 @@ namespace Client
         }
 
 
-        private byte[] SerializeToJson(Send_Message msg)
+        private static byte[] SerializeToJson(Send_Message msg)
         {
             string json = JsonConvert.SerializeObject(msg);
             byte[] sendMsg = Encoding.UTF8.GetBytes(json);
             return sendMsg;
         }
 
-        public async Task Send_msgAsync(Send_Message msg)
+        public static async Task Send_msgAsync(Send_Message msg)
         {
             byte[] sendMsg = SerializeToJson(msg);
             await stream.WriteAsync(sendMsg, 0, sendMsg.Length).ConfigureAwait(false);

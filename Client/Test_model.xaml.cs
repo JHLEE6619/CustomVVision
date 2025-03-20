@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WindowsAPICodePack.Dialogs;
 
 namespace Client
 {
@@ -23,6 +24,23 @@ namespace Client
         public Test_model()
         {
             InitializeComponent();
+        }
+
+        private void btn_sel_image_Click(object sender, RoutedEventArgs e)
+        {
+
+            using CommonOpenFileDialog dialog = new()
+            {
+                IsFolderPicker = false,
+            };
+
+            if (dialog.ShowDialog() == CommonFileDialogResult.Ok)
+            {
+                TBlock_imageUri.Text = dialog.FileName;
+                img_testImg.Source = new BitmapImage(new Uri(dialog.FileName));
+            }
+
+
         }
     }
 }

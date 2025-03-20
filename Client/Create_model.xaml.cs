@@ -48,7 +48,7 @@ namespace Client
             images.RemoveAt(idx);
         }
 
-        private void btn_createModel_Click(object sender, RoutedEventArgs e)
+        private async void btn_createModel_ClickAsync(object sender, RoutedEventArgs e)
         {
             Model model = new()
             {
@@ -63,11 +63,13 @@ namespace Client
 
             Send_Message msg = new()
             {
-                MsgId = (byte)Client.MsgId.CREATE_MODEL,
-                UserInfo = new() { UserId = Client.UserId },
+                MsgId = (byte)_Client.MsgId.CREATE_MODEL,
+                UserInfo = new() { UserId = _Client.UserId },
                 ModelInfo = model,
                 ImageInfo = images.ToList(),
             };
+
+            await _Client.Send_msgAsync(msg);
         }
     }
 }

@@ -27,18 +27,7 @@ namespace Client
         public Home()
         {
             InitializeComponent();
-            //clnt.ConnectServer();
-            //clnt.Send_msgAsync(Login(Client.UserId));
-
         }
-
-
-        //private Send_Message Login(string userId)
-        //{
-        //    Send_Message msg = new() { MsgId = (byte)Client.MsgId.LOGIN, UserId = userId };
-        //    return msg;
-        //}
-
 
         private void btn_create_model_Click(object sender, RoutedEventArgs e)
         {
@@ -48,12 +37,14 @@ namespace Client
 
         private void btn_test_model_Click(object sender, RoutedEventArgs e)
         {
-
+            Test_model test_Model = new();
+            this.NavigationService.Navigate(test_Model);
         }
 
         private void btn_download_model_Click(object sender, RoutedEventArgs e)
         {
-
+            Download_model download_Model = new();
+            this.NavigationService.Navigate(download_Model);
         }
     }
 }

@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="WindowsAPICodePack.Shell.CommonFileDialogs.Wpf" Version="1.1.5.1" />
   </ItemGroup>
 
 </Project>

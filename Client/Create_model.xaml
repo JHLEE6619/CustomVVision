@@ -56,6 +56,6 @@
             <TextBox x:Name="TBox_height" Grid.Column="2" FontSize="16" Height="24" HorizontalAlignment="Left" Margin="60,0,0,0" Grid.Row="4" TextWrapping="Wrap"  VerticalAlignment="Center" Width="60"/>
 
         </Grid>
-        <Button x:Name="btn_createModel" Width="80" FontSize="16" Content="모델 생성" HorizontalAlignment="Left" Margin="335,530,0,0" VerticalAlignment="Top" Click="btn_createModel_Click"/>
+        <Button x:Name="btn_createModel" Width="80" FontSize="16" Content="모델 생성" HorizontalAlignment="Left" Margin="335,530,0,0" VerticalAlignment="Top" Click="btn_createModel_ClickAsync"/>
     </Grid>
 </Page>
