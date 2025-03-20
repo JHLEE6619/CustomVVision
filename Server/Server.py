@@ -1,6 +1,9 @@
 import asyncio
 import orjson
 import DBC
+import CNN
+import File
+
 from enum import IntEnum, auto
 
 # while문이 없어도 계속해서 read하는 비동기 멀티스레드 서버
