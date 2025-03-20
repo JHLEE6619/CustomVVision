@@ -37,6 +37,7 @@ namespace Client
 
         private void btn_test_model_Click(object sender, RoutedEventArgs e)
         {
+            _Client.TestResult = "";
             Test_model test_Model = new();
             this.NavigationService.Navigate(test_Model);
         }

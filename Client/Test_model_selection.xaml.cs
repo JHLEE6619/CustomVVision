@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Client.Models;
 
 namespace Client
 {
@@ -20,9 +21,12 @@ namespace Client
     /// </summary>
     public partial class Test_model_selection : Page
     {
+        
         public Test_model_selection()
         {
+            Request_modelListAsync();
             InitializeComponent();
+            LV_modelList.ItemsSource = _Client.ModelList;
         }
 
         private void Select_model(object sender, SelectionChangedEventArgs e)
@@ -31,6 +35,17 @@ namespace Client
                 return;
             int idx = LV_modelList.SelectedIndex;
             LV_modelList.SelectedItem = null;
+        }
+
+        private async Task Request_modelListAsync()
+        {
+            Send_Message msg = new()
+            {
+                MsgId = (byte)_Client.MsgId.SHOW_MODEL_LIST,
+                UserInfo = new() { UserId = _Client.UserId }
+            };
+
+            await _Client.Send_msgAsync(msg);
         }
     }
 }

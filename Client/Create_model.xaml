@@ -52,8 +52,8 @@
             <RadioButton IsChecked="False" Margin="20,0,0,0" x:Name="radio_grey" GroupName="Color_type" FontSize="16" Grid.Column="2" Content="흑백" HorizontalAlignment="Left" Grid.Row="3" VerticalAlignment="Center"/>
             <TextBlock FontSize="16" Grid.Column="1" HorizontalAlignment="Left" Margin="20,0,0,0" Grid.Row="4" TextWrapping="Wrap" Text="가로" VerticalAlignment="Center"/>
             <TextBlock FontSize="16" Grid.Column="2" HorizontalAlignment="Left" Margin="20,0,0,0" Grid.Row="4" TextWrapping="Wrap" Text="세로" VerticalAlignment="Center"/>
-            <TextBox x:Name="TBox_width" Grid.Column="1" FontSize="16" Height="24" HorizontalAlignment="Left" Margin="60,0,0,0" Grid.Row="4" TextWrapping="Wrap"  VerticalAlignment="Center" Width="60"/>
-            <TextBox x:Name="TBox_height" Grid.Column="2" FontSize="16" Height="24" HorizontalAlignment="Left" Margin="60,0,0,0" Grid.Row="4" TextWrapping="Wrap"  VerticalAlignment="Center" Width="60"/>
+            <TextBox x:Name="TBox_width" Grid.Column="1" FontSize="16" Height="24" HorizontalAlignment="Left" Margin="60,0,0,0" Grid.Row="4" TextWrapping="Wrap"  VerticalAlignment="Center" Width="50"/>
+            <TextBox x:Name="TBox_height" Grid.Column="2" FontSize="16" Height="24" HorizontalAlignment="Left" Margin="60,0,0,0" Grid.Row="4" TextWrapping="Wrap"  VerticalAlignment="Center" Width="50"/>
 
         </Grid>
         <Button x:Name="btn_createModel" Width="80" FontSize="16" Content="모델 생성" HorizontalAlignment="Left" Margin="335,530,0,0" VerticalAlignment="Top" Click="btn_createModel_ClickAsync"/>

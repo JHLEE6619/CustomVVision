@@ -6,6 +6,7 @@ using System.Net.Sockets;
 using System.Text;
 using System.Text.Json.Serialization;
 using System.Threading.Tasks;
+using System.Windows.Media;
 using System.Windows.Threading;
 using Client.Models;
 using Newtonsoft.Json;
@@ -19,12 +20,14 @@ namespace Client
         //static NetworkStream stream = tc.GetStream();
         static NetworkStream stream;
         private static readonly object thisLock = new();
+        public static List<string> ModelList { get; set; } = [];
+        public static string TestResult { get; set; }
 
         public static string UserId { get; set; }
 
         public enum MsgId : byte
         {
-            JOIN, LOGIN, CREATE_MODEL, SHOW_MODEL_LIST, TEST_MODEL, DOWNLOAD_MODEL
+            JOIN, LOGIN, CREATE_MODEL, SHOW_MODEL_LIST, TEST_MODEL, SEND_FILE, DOWNLOAD_MODEL
         }
 
         public static void ConnectServer()
@@ -63,9 +66,11 @@ namespace Client
         {
             switch (msg.MsgId)
             {
-                case (byte)MsgId.SHOW_MODEL_LIST: 
+                case (byte)MsgId.SHOW_MODEL_LIST:
+                    Receive_modelList(msg.ModelList);
                     break;
                 case (byte)MsgId.TEST_MODEL:
+                    Receive_testResult(msg.TestResult);
                     break;
                 case (byte)MsgId.DOWNLOAD_MODEL:
                     break;
@@ -85,6 +90,16 @@ namespace Client
         {
             byte[] sendMsg = SerializeToJson(msg);
             await stream.WriteAsync(sendMsg, 0, sendMsg.Length).ConfigureAwait(false);
+        }
+
+        private static void Receive_modelList(List<string> modelList)
+        {
+            ModelList = modelList;
+        }
+
+        private static void Receive_testResult(string testResult)
+        {
+            TestResult = testResult;
         }
     }
 }

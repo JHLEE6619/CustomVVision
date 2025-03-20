@@ -15,6 +15,7 @@ class Msg(IntEnum):
     SHOW_MODEL_LIST = auto()
     TEST_MODEL = auto()
     DOWNLOAD_MODEL = auto()
+    TRANSFER_FILE = auto()
 
 # while문이 없어도 계속해서 read하는 비동기 멀티스레드 서버
 # 이벤트 콜백을 정의하는 프로토콜 클래스
@@ -55,7 +56,6 @@ class EchoServerProtocol(asyncio.Protocol):
                 return
             case Msg.CREATE_MODEL:
                 modelDir = os.path.join('models', msg['ModelInfo']["ModelId"])
-
                 dbc.add_modelInfo(msg)
                 file.makedirs(modelDir)
                 cnn.DeepLearing(msg["ModelInfo"], msg["ImageInfo"])

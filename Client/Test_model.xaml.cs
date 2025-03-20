@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Client.Models;
 using WindowsAPICodePack.Dialogs;
 
 namespace Client
@@ -41,6 +42,14 @@ namespace Client
             }
 
 
+        }
+
+        private void btn_test_Click(object sender, RoutedEventArgs e)
+        {
+            Send_Message msg = new()
+            {
+                MsgId = (byte)_Client.MsgId.SEND_FILE
+            };
         }
     }
 }
