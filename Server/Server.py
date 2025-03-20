@@ -3,6 +3,7 @@ import orjson
 import DBC
 import CNN
 import File
+import os.path
 
 from enum import IntEnum, auto
 
@@ -42,6 +43,8 @@ class EchoServerProtocol(asyncio.Protocol):
     def handler(self, msg):
         dbc = DBC.DBC()
         cnn = CNN.CNN()
+        file = File.File_handler()
+
         msgId = msg["msgId"]
         match msgId:
             case Msg.JOIN:
@@ -51,19 +54,22 @@ class EchoServerProtocol(asyncio.Protocol):
                 dbc.login(msg["userInfo"])
                 return
             case Msg.CREATE_MODEL:
+                modelDir = os.path.join('models', msg['ModelInfo']["ModelId"])
+
                 dbc.add_modelInfo(msg)
-                cnn.DeepLearing(msg["modelInfo"])
+                file.makedirs(modelDir)
+                cnn.DeepLearing(msg["ModelInfo"], msg["ImageInfo"])
                 # 모델 학습 함수
                 return
             case Msg.SHOW_MODEL_LIST:
-                dbc.select_modelList(msg["userInfo"]["userId"])
+                dbc.select_modelList(msg["UserInfo"]["UserId"])
             case Msg.TEST_MODEL:
-                dbc.select_modelDir(msg["modelInfo"]["modelId"])
+                dbc.select_modelDir(msg["ModelInfo"]["ModelId"])
                 # 파일 수신 함수
                 # 테스트 하는 함수
                 return
             case Msg.DOWNLOAD_MODEL:
-                dbc.select_modelList(msg["userInfo"]["userId"])
+                dbc.select_modelList(msg["UserInfo"]["UserId"])
                 # 파일 전송 함수
                 return
 

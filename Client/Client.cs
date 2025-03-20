@@ -61,11 +61,11 @@ namespace Client
         {
             switch (msg.MsgId)
             {
-                case (byte)MsgId.SHOW_MODEL_LIST: // 할당
+                case (byte)MsgId.SHOW_MODEL_LIST: 
                     break;
-                case (byte)MsgId.TEST_MODEL: // 할당
+                case (byte)MsgId.TEST_MODEL:
                     break;
-                case (byte)MsgId.DOWNLOAD_MODEL: // 할당
+                case (byte)MsgId.DOWNLOAD_MODEL:
                     break;
             }
 

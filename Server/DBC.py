@@ -1,4 +1,5 @@
 import pymysql
+import os
 
 class DBC:
 
@@ -54,11 +55,12 @@ class DBC:
     def add_modelInfo(self, recv_msg):
         userInfo = recv_msg["UserInfo"]
         modelInfo = recv_msg["ModelInfo"]
-        model_dir = f'models/{modelInfo["modelId"]}'
+        model_dir = os.path.join('models',modelInfo["ModelId"])
 
-        sql = 'INSERT INTO MODEL VALUES(%s, %s, %d, %d, %s, %d, %d)'
+        sql = 'INSERT INTO MODEL VALUES(%s, %s, %d, %d, %s, %d, %d, %d)'
         vals = (modelInfo["ModelId"], userInfo["UserId"], modelInfo["Classification"],
-                modelInfo["Epoch"], model_dir, modelInfo["ImageWidth"], modelInfo["ImageHeight"])
+                modelInfo["Epoch"], model_dir, modelInfo["ImageWidth"], modelInfo["ImageHeight"],
+                modelInfo["ColorType"])
         try:
             self.cursor.execute(sql, vals)
             self.conn.commit()

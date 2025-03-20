@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Client.Models;
 
 namespace Client
 {
@@ -43,12 +44,30 @@ namespace Client
 
         private void btn_removeLabel_Click(object sender, RoutedEventArgs e)
         {
-            
+            int idx = LV_image.SelectedIndex;
+            images.RemoveAt(idx);
         }
 
         private void btn_createModel_Click(object sender, RoutedEventArgs e)
         {
+            Model model = new()
+            {
+                ModelId = TBox_modelId.Text,
+                Classification = (bool)radio_binary.IsChecked ? false : true,
+                Epoch = byte.Parse(TBox_epoch.Text),
+                ColorType = (bool)radio_color.IsChecked ? (byte)1 : (byte)3,
+                ImageWidth = uint.Parse(TBox_width.Text),
+                ImageHeight = uint.Parse(TBox_height.Text)
+            };
 
+
+            Send_Message msg = new()
+            {
+                MsgId = (byte)Client.MsgId.CREATE_MODEL,
+                UserInfo = new() { UserId = Client.UserId },
+                ModelInfo = model,
+                ImageInfo = images.ToList(),
+            };
         }
     }
 }

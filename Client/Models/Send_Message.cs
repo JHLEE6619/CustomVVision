@@ -10,7 +10,7 @@ namespace Client.Models
     {
         public byte MsgId { get; set; }
         public User UserInfo { get; set; }
-        public Model modelInfo { get; set; }
-        public Image imageInfo { get; set; }
+        public Model ModelInfo { get; set; }
+        public List<Image> ImageInfo { get; set; }
     }
 }

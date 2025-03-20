@@ -5,13 +5,13 @@ from PIL import Image
 import numpy as np
 
 class Test:
-    def Test_model(self, imagePath,modelInfo):
+    def Test_model(self, imagePath, modelInfo):
         # test.png는 그림판에서 붓으로 숫자 8을 그린 이미지 파일
         # test.png 파일 열어서 L(256단계 흑백이미지)로 변환
         img = Image.open(imagePath)
 
-        # 이미지를 RGB 픽셀로 사이즈 변환
-        img = np.resize(img, (3, modelInfo['ImageWidth'], modelInfo['ImageHeight']))
+        # 이미지 사이즈를 모델에 맞는 사이즈로 조정
+        img = np.resize(img, (modelInfo['ColorType'], modelInfo['ImageWidth'], modelInfo['ImageHeight']))
 
         # 데이터를 모델에 적용할 수 있도록 가공
         test_data = ((np.array(img) / 255) - 1) * -1

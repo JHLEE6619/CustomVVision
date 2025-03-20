@@ -13,5 +13,6 @@ namespace Client.Models
         public byte Epoch { get; set; }
         public uint ImageWidth { get; set; }
         public uint ImageHeight { get; set; }
+        public byte ColorType {  get; set; }
     }
 }
