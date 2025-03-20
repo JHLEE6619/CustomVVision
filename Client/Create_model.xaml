@@ -22,6 +22,8 @@
                 <RowDefinition Height="50"/>
                 <RowDefinition Height="50"/>
                 <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
             <TextBlock FontSize="16" HorizontalAlignment="Left" Margin="20,0,0,0" TextWrapping="Wrap" Text="[모델명]" VerticalAlignment="Center"/>
@@ -31,19 +33,23 @@
             <RadioButton x:Name="radio_binary" GroupName="Classification" FontSize="16" Grid.Column="1" Content="이항 분류" HorizontalAlignment="Left" Margin="20,0,0,0" Grid.Row="1" VerticalAlignment="Center"/>
             <RadioButton x:Name="radio_multi" GroupName="Classification" FontSize="16" Grid.Column="2" Content="다항 분류" HorizontalAlignment="Left" Margin="20,0,0,0" Grid.Row="1" VerticalAlignment="Center"/>
             <TextBox Grid.Column="1" FontSize="16" Height="24" HorizontalAlignment="Left" Margin="20,0,0,0" Grid.Row="2" TextWrapping="Wrap"  VerticalAlignment="Center" Width="50"/>
-            <TextBlock Grid.Row="3" FontSize="16" HorizontalAlignment="Left" Margin="20,0,0,0" TextWrapping="Wrap" Text="[이미지]" VerticalAlignment="Center"/>
-            <ListView x:Name="LV_image" Margin="0,10,0,20" Grid.ColumnSpan="3" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Top" Width="340" Height="170">
+            <TextBlock Grid.Row="5" FontSize="16" HorizontalAlignment="Left" Margin="20,0,0,0" TextWrapping="Wrap" Text="[이미지 추가]" VerticalAlignment="Center"/>
+            <ListView x:Name="LV_image" Margin="0,10,0,20" Grid.ColumnSpan="3" Grid.Row="6" HorizontalAlignment="Center" VerticalAlignment="Top" Width="340" Height="120">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Orientation="Horizontal">
                             <TextBox Text="{Binding Path=Label, Mode=TwoWay}" FontSize="16" Width="100"/>
                             <Button Content="파일 선택" FontSize="16" Width="100"/>
-                            <Button x:Name="btn_removeLabel" Content="제거" FontSize="16" Width="80" Click="btn_removeLabel_Click"/>
                         </StackPanel>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
-            <Button x:Name="btn_addLabel" Padding="-7" HorizontalContentAlignment="Center" VerticalContentAlignment="Top" Width="20" FontWeight="Bold" FontSize ="20" Grid.Column="2" Content="+" HorizontalAlignment="Left" Margin="90,30,0,0" Grid.Row="3" Height="20" VerticalAlignment="Top" Click="btn_addLabel_Click"/>
+            <Button x:Name="btn_addLabel" Padding="-7" HorizontalContentAlignment="Center" VerticalContentAlignment="Top" Width="20" FontWeight="Bold" FontSize ="20" Grid.Column="2" Content="+" HorizontalAlignment="Left" Margin="60,30,0,0" Grid.Row="5" Height="20" VerticalAlignment="Top" Click="btn_addLabel_Click"/>
+            <Button x:Name="btn_removeLabel" Padding="-7" HorizontalContentAlignment="Center" VerticalContentAlignment="Top" Width="20" FontWeight="Bold" FontSize ="20" Grid.Column="2" Content="-" HorizontalAlignment="Left" Margin="90,30,0,0" Grid.Row="5" Height="20" VerticalAlignment="Top" Click="btn_addLabel_Click"/>
+            <TextBlock Margin="20,0,0,0" Grid.Row="3" FontSize="16" HorizontalAlignment="Left" TextWrapping="Wrap" Text="[색상]" VerticalAlignment="Center"/>
+            <TextBlock Margin="20,0,0,0" Grid.Row="4" FontSize="16" HorizontalAlignment="Left" TextWrapping="Wrap" Text="[이미지 크기]" VerticalAlignment="Center"/>
+            <RadioButton Margin="20,0,0,0" x:Name="radio_color" GroupName="Image_type" FontSize="16" Grid.Column="1" Content="컬러" HorizontalAlignment="Left" Grid.Row="3" VerticalAlignment="Center"/>
+            <RadioButton Margin="20,0,0,0" x:Name="radio_grey" GroupName="Image_type" FontSize="16" Grid.Column="2" Content="흑백" HorizontalAlignment="Left" Grid.Row="3" VerticalAlignment="Center"/>
 
         </Grid>
         <Button x:Name="btn_createModel" Width="80" FontSize="16" Content="모델 생성" HorizontalAlignment="Left" Margin="335,530,0,0" VerticalAlignment="Top" Click="btn_createModel_Click"/>

@@ -6,7 +6,6 @@ import File
 
 from enum import IntEnum, auto
 
-# while문이 없어도 계속해서 read하는 비동기 멀티스레드 서버
 
 class Msg(IntEnum):
     JOIN = 0
@@ -16,7 +15,8 @@ class Msg(IntEnum):
     TEST_MODEL = auto()
     DOWNLOAD_MODEL = auto()
 
-#이벤트 콜백을 정의하는 프로토콜 클래스
+# while문이 없어도 계속해서 read하는 비동기 멀티스레드 서버
+# 이벤트 콜백을 정의하는 프로토콜 클래스
 class EchoServerProtocol(asyncio.Protocol):
     
     #연결이 성공하면 호출되는 콜백
@@ -41,6 +41,7 @@ class EchoServerProtocol(asyncio.Protocol):
 
     def handler(self, msg):
         dbc = DBC.DBC()
+        cnn = CNN.CNN()
         msgId = msg["msgId"]
         match msgId:
             case Msg.JOIN:
@@ -51,6 +52,8 @@ class EchoServerProtocol(asyncio.Protocol):
                 return
             case Msg.CREATE_MODEL:
                 dbc.add_modelInfo(msg)
+                cnn.DeepLearing(msg["modelInfo"])
+                # 모델 학습 함수
                 return
             case Msg.SHOW_MODEL_LIST:
                 dbc.select_modelList(msg["userInfo"]["userId"])
