@@ -15,10 +15,10 @@ namespace Client
 {
     public static class Main_Client
     {
-        //static TcpClient tc = new TcpClient("127.0.0.1", 10000);
-        static TcpClient tc = new();
-        //static NetworkStream stream = tc.GetStream();
-        static NetworkStream stream;
+        static TcpClient tc = new TcpClient("127.0.0.1", 10000);
+        static NetworkStream stream = tc.GetStream();
+        //static TcpClient tc = new();
+        //static NetworkStream stream;
         private static readonly object thisLock = new();
         public static List<string> ModelList { get; set; } = [];
         public static string TestResult { get; set; }

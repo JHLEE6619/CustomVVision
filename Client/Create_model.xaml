@@ -34,11 +34,11 @@
             <RadioButton IsChecked="False" x:Name="radio_multi" GroupName="Classification" FontSize="16" Grid.Column="2" Content="다항 분류" HorizontalAlignment="Left" Margin="20,0,0,0" Grid.Row="1" VerticalAlignment="Center"/>
             <TextBox x:Name="TBox_epoch" Grid.Column="1" FontSize="16" Height="24" HorizontalAlignment="Left" Margin="20,0,0,0" Grid.Row="2" TextWrapping="Wrap"  VerticalAlignment="Center" Width="50"/>
             <TextBlock Grid.Row="5" FontSize="16" HorizontalAlignment="Left" Margin="20,0,0,0" TextWrapping="Wrap" Text="[이미지 추가]" VerticalAlignment="Center"/>
-            <ListView x:Name="LV_image" Margin="20,10,0,0" Grid.ColumnSpan="3" Grid.Row="6" HorizontalAlignment="Left" VerticalAlignment="Top" Width="340" Height="86">
+            <ListView ItemsSource="{Binding Labels}" x:Name="LV_image" Margin="20,10,0,0" Grid.ColumnSpan="3" Grid.Row="6" HorizontalAlignment="Left" VerticalAlignment="Top" Width="340" Height="86">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Orientation="Horizontal">
-                            <TextBox Text="{Binding Mode=TwoWay}" FontSize="14" Width="200"/>
+                            <TextBox Text="{Binding Name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" FontSize="14" Width="200"/>
                             <Button Content="파일 선택" FontSize="14" Width="140" Click="btn_selectionFile_Click"/>
                         </StackPanel>
                     </DataTemplate>

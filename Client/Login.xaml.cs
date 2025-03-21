@@ -24,7 +24,7 @@ namespace Client
         public Login()
         {
             InitializeComponent();
-            //Client.ConnectServer();
+            Main_Client.ConnectServer();
         }
 
         private void btn_join_click(object sender, RoutedEventArgs e)
@@ -36,7 +36,7 @@ namespace Client
         private void btn_login_Click(object sender, RoutedEventArgs e)
         {
             Main_Client.UserId = TBox_id.Text;
-            //LoginAsync(); // 로그인 실패 예외처리 추가 안했음
+            LoginAsync(); // 로그인 실패 예외처리 추가 안했음
             Home main = new();
             this.NavigationService.Navigate(main);
         }

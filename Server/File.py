@@ -20,22 +20,23 @@ class File_handler:
                 images.append(img_array)
         return np.array(images) / 255.0 # 하나의 레이블에 해당하는 이미지 ndarray 반환
 
-    def load_image(self, modelDir, labels, imgWidth, imgHeight):
+    def load_image(self, modelId, labels, imgWidth, imgHeight):
         imgList = []
         labelList = []
         for label in labels:
-            imgDir = os.path.join(modelDir, label)
-            for fileName in os.listdir(str(imgDir)):
+            imgDir = os.path.join('models', modelId, label)
+            print(imgDir)
+            for fileName in os.listdir(imgDir):
                 if fileName.endswith(('.jpg', '.png', '.jpeg')):
                     imgName = os.path.join(str(imgDir),fileName)
                     img = Image.open(imgName).resize((imgWidth, imgHeight))
                     img_arr = np.array(img)
                     imgList.append(img_arr)
                     labelList.append(label)
-
+        print("이미지 리스트에 담기 완료")
         imgList = np.array(imgList) / 255.0
-
-        return pd.Series(imgList), pd.Series(labelList)
+        print("이미지 ndarray로 전환하고 정규화 완료")
+        return imgList, labelList
 
     def recv_file(self, file):
         file_name = f'{self.fileName}.jpg'

@@ -51,7 +51,7 @@ namespace Client
 
         }
 
-        private async Task btn_test_ClickAsync(object sender, RoutedEventArgs e)
+        private async void btn_test_ClickAsync(object sender, RoutedEventArgs e)
         {
             byte[]? TestImg = Read_testImg(TBlock_imageUri.Text);
             if (TestImg != null)

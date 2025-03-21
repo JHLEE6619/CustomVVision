@@ -19,6 +19,7 @@ class Msg(IntEnum):
 # while문이 없어도 계속해서 read하는 비동기 멀티스레드 서버
 # 이벤트 콜백을 정의하는 프로토콜 클래스
 class ServerProtocol(asyncio.Protocol):
+    dbc = DBC.DBC()
     #연결이 성공하면 호출되는 콜백
     #transport는 연결 소켓을 나타내고 이벤트 루프에서 전달된다
     def connection_made(self, transport):
@@ -35,33 +36,33 @@ class ServerProtocol(asyncio.Protocol):
         self.handler(msg)
 
     def handler(self, msg):
-        dbc = DBC.DBC()
         cnn = CNN.CNN()
         file = File.File_handler()
         test = Test()
 
-        msgId = msg["msgId"]
+        msgId = msg["MsgId"]
         match msgId:
             case Msg.JOIN:
-                dbc.join(msg["UserInfo"])
+                self.dbc.join(msg["UserInfo"])
                 return
             case Msg.LOGIN:
-                dbc.login(msg["userInfo"])
+                self.dbc.login(msg["UserInfo"])
                 return
             case Msg.CREATE_MODEL:
                 modelDir = os.path.join('models', msg['ModelInfo']["ModelId"])
                 file.makedirs(modelDir)
-                cnn.DeepLearing(msg["ModelInfo"], msg["ImageInfo"])
-                dbc.add_modelInfo(msg)
+                cnn.DeepLearing(msg["ModelInfo"], msg["Labels"])
+                self.dbc.add_modelInfo(msg)
+                self.dbc.add_imageInfo(msg)
                 return
             case Msg.SHOW_MODEL_LIST:
-                modelList = dbc.select_modelList(msg["UserInfo"]["UserId"])
+                modelList = self.dbc.select_modelList(msg["UserInfo"]["UserId"])
                 send_msg = {"MsgId":Msg.SHOW_MODEL_LIST, "ModelList":modelList, "TestResult":"", "ModelFile":None}
                 send_msg = orjson.dumps(send_msg) # json 형식으로 직렬화
                 self.transport.write(send_msg)  # 데이터 송신
             case Msg.TEST_MODEL:
                 # 모델 정보 불러오기
-                modelInfo = dbc.select_modelInfo(msg["ModelInfo"]["ModelId"])
+                modelInfo = self.dbc.select_modelInfo(msg["ModelInfo"]["ModelId"])
                 # 파일 수신 함수
                 imgPath = file.recv_file(msg["TestImg"])
                 # 테스트 하는 함수

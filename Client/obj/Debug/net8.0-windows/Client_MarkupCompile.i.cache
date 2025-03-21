@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\LMS\Desktop\CNN 이미지 분류 딥러닝 모델 제작 서비스\CustomVVision\Client\obj\Debug\net8.0-windows\
+C:\Users\ljh49\OneDrive\바탕 화면\CustomVVision\Client\obj\Debug\net8.0-windows\
 Client
 none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_OR_GREATER;NET7_0_OR_GREATER;NET8_0_OR_GREATER;NETCOREAPP3_0_OR_GREATER;NETCOREAPP3_1_OR_GREATER;WINDOWS7_0_OR_GREATER
-C:\Users\LMS\Desktop\CNN 이미지 분류 딥러닝 모델 제작 서비스\CustomVVision\Client\App.xaml
+C:\Users\ljh49\OneDrive\바탕 화면\CustomVVision\Client\App.xaml
 81791856451
 
 191323066641
-200-1950018940
+200-195899828
 Create_model.xaml;Download_model.xaml;Home.xaml;Join.xaml;Login.xaml;MainWindow.xaml;Test_model.xaml;Test_model_selection.xaml;
 
-False
+True
 
