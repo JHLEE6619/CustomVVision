@@ -10,7 +10,7 @@ namespace Client.Models
     {
         public string ModelId { get; set; }
         public byte[] ImgFile { get; set; }
-        public string Label { get; set; } = "새 레이블";
+        public string Label { get; set; }
         public string ImgUri { get; set; }
     }
 }

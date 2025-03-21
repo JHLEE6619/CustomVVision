@@ -38,9 +38,8 @@
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Orientation="Horizontal">
-                            <TextBox Text="{Binding Path=Label, Mode=TwoWay}" FontSize="14" Width="100"/>
-                            <Button Content="파일 선택" FontSize="14" Width="80" Click="btn_selectionFile_Click"/>
-                            <TextBlock Text="{Binding Path=ImgUri, Mode=TwoWay}" FontSize="12" Width="140"/>
+                            <TextBox Text="{Binding Mode=TwoWay}" FontSize="14" Width="200"/>
+                            <Button Content="파일 선택" FontSize="14" Width="140" Click="btn_selectionFile_Click"/>
                         </StackPanel>
                     </DataTemplate>
                 </ListView.ItemTemplate>

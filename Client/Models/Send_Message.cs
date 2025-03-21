@@ -12,6 +12,6 @@ namespace Client.Models
         public User UserInfo { get; set; }
         public Model ModelInfo { get; set; }
         public byte[] TestImage { get; set; }
-        public List<Image> ImageInfo { get; set; }
+        public List<string> Labels { get; set; }
     }
 }

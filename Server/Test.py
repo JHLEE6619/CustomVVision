@@ -6,8 +6,7 @@ import numpy as np
 
 class Test:
     def Test_model(self, imagePath, modelInfo):
-        # test.png는 그림판에서 붓으로 숫자 8을 그린 이미지 파일
-        # test.png 파일 열어서 L(256단계 흑백이미지)로 변환
+        # 이미지 불러오기
         img = Image.open(imagePath)
 
         # 이미지 사이즈를 모델에 맞는 사이즈로 조정
@@ -20,7 +19,13 @@ class Test:
         model = load_model(modelInfo['ModelDir'])
 
         # 클래스 예측 함수에 가공된 테스트 데이터 넣어 결과 도출
-        res =(model.predict(test_data) > 0.5).astype("int32")
+        result = model.predict(test_data)
 
-        print(res)
+        # 가장 확률이 높은 확률을 가진 인덱스 추출
+        idx = np.argmax(result)
+
+        # 인덱스로 예측결과 레이블 인덱싱
+        prediction = modelInfo["Labels"][idx]
+
+        return prediction
 

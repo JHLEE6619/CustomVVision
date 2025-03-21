@@ -23,13 +23,13 @@ namespace Client
     /// </summary>
     public partial class Create_model : Page
     {
-        ObservableCollection<Models.Image> images = [];
+        ObservableCollection<string> labels = [];
 
         public Create_model()
         {
             InitializeComponent();
             addLabel();
-            LV_image.ItemsSource = images;
+            LV_image.ItemsSource = labels;
         }
 
         private void btn_addLabel_Click(object sender, RoutedEventArgs e)
@@ -39,14 +39,13 @@ namespace Client
 
         private void addLabel()
         {
-            Models.Image image = new();
-            images.Add(image);
+            labels.Add("새 레이블");
         }
 
         private void btn_removeLabel_Click(object sender, RoutedEventArgs e)
         {
             int idx = LV_image.SelectedIndex;
-            images.RemoveAt(idx);
+            labels.RemoveAt(idx);
         }
 
         private async void btn_createModel_ClickAsync(object sender, RoutedEventArgs e)
@@ -67,7 +66,7 @@ namespace Client
                 MsgId = (byte)Main_Client.MsgId.CREATE_MODEL,
                 UserInfo = new() { UserId = Main_Client.UserId },
                 ModelInfo = model,
-                ImageInfo = images.ToList(),
+                Labels = labels.ToList()
             };
 
             await Main_Client.Send_msgAsync(msg);
