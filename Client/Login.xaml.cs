@@ -35,7 +35,7 @@ namespace Client
 
         private void btn_login_Click(object sender, RoutedEventArgs e)
         {
-            _Client.UserId = TBox_id.Text;
+            Main_Client.UserId = TBox_id.Text;
             //LoginAsync(); // 로그인 실패 예외처리 추가 안했음
             Home main = new();
             this.NavigationService.Navigate(main);
@@ -51,11 +51,11 @@ namespace Client
 
             Send_Message msg = new()
             {
-                MsgId = (byte)_Client.MsgId.LOGIN,
+                MsgId = (byte)Main_Client.MsgId.LOGIN,
                 UserInfo = user
             };
 
-            await _Client.Send_msgAsync(msg);
+            await Main_Client.Send_msgAsync(msg);
         }
     }
 }

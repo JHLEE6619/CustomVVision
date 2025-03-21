@@ -15,7 +15,7 @@
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <StackPanel>
-                        <TextBlock Text="{Binding ModelId}" FontSize="18"/>
+                        <TextBlock Text="{Binding}" FontSize="18"/>
                     </StackPanel>
                 </DataTemplate>
             </ListView.ItemTemplate>

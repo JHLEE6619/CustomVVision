@@ -1,38 +1,30 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\ljh49\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\CustomVVision\\Client\\",
+  "WorkspaceRootPath": "C:\\Users\\LMS\\Desktop\\CNN \uC774\uBBF8\uC9C0 \uBD84\uB958 \uB525\uB7EC\uB2DD \uBAA8\uB378 \uC81C\uC791 \uC11C\uBE44\uC2A4\\CustomVVision\\Client\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7D4A9AB5-520D-4CA2-ABD5-2AF30FEFB85C}|Client.csproj|c:\\users\\ljh49\\onedrive\\\uBC14\uD0D5 \uD654\uBA74\\customvvision\\client\\test_model.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7D4A9AB5-520D-4CA2-ABD5-2AF30FEFB85C}|Client.csproj|c:\\users\\lms\\desktop\\cnn \uC774\uBBF8\uC9C0 \uBD84\uB958 \uB525\uB7EC\uB2DD \uBAA8\uB378 \uC81C\uC791 \uC11C\uBE44\uC2A4\\customvvision\\client\\test_model.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7D4A9AB5-520D-4CA2-ABD5-2AF30FEFB85C}|Client.csproj|solutionrelative:test_model.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7D4A9AB5-520D-4CA2-ABD5-2AF30FEFB85C}|Client.csproj|c:\\users\\ljh49\\onedrive\\\uBC14\uD0D5 \uD654\uBA74\\customvvision\\client\\test_model.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{7D4A9AB5-520D-4CA2-ABD5-2AF30FEFB85C}|Client.csproj|c:\\users\\lms\\desktop\\cnn \uC774\uBBF8\uC9C0 \uBD84\uB958 \uB525\uB7EC\uB2DD \uBAA8\uB378 \uC81C\uC791 \uC11C\uBE44\uC2A4\\customvvision\\client\\test_model.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{7D4A9AB5-520D-4CA2-ABD5-2AF30FEFB85C}|Client.csproj|solutionrelative:test_model.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7D4A9AB5-520D-4CA2-ABD5-2AF30FEFB85C}|Client.csproj|c:\\users\\ljh49\\onedrive\\\uBC14\uD0D5 \uD654\uBA74\\customvvision\\client\\_client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7D4A9AB5-520D-4CA2-ABD5-2AF30FEFB85C}|Client.csproj|solutionrelative:_client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7D4A9AB5-520D-4CA2-ABD5-2AF30FEFB85C}|Client.csproj|c:\\users\\ljh49\\onedrive\\\uBC14\uD0D5 \uD654\uBA74\\customvvision\\client\\home.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7D4A9AB5-520D-4CA2-ABD5-2AF30FEFB85C}|Client.csproj|solutionrelative:home.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7D4A9AB5-520D-4CA2-ABD5-2AF30FEFB85C}|Client.csproj|c:\\users\\ljh49\\onedrive\\\uBC14\uD0D5 \uD654\uBA74\\customvvision\\client\\home.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{7D4A9AB5-520D-4CA2-ABD5-2AF30FEFB85C}|Client.csproj|solutionrelative:home.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7D4A9AB5-520D-4CA2-ABD5-2AF30FEFB85C}|Client.csproj|c:\\users\\ljh49\\onedrive\\\uBC14\uD0D5 \uD654\uBA74\\customvvision\\client\\models\\receive_message.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7D4A9AB5-520D-4CA2-ABD5-2AF30FEFB85C}|Client.csproj|solutionrelative:models\\receive_message.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7D4A9AB5-520D-4CA2-ABD5-2AF30FEFB85C}|Client.csproj|c:\\users\\ljh49\\onedrive\\\uBC14\uD0D5 \uD654\uBA74\\customvvision\\client\\test_model_selection.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7D4A9AB5-520D-4CA2-ABD5-2AF30FEFB85C}|Client.csproj|c:\\users\\lms\\desktop\\cnn \uC774\uBBF8\uC9C0 \uBD84\uB958 \uB525\uB7EC\uB2DD \uBAA8\uB378 \uC81C\uC791 \uC11C\uBE44\uC2A4\\customvvision\\client\\test_model_selection.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7D4A9AB5-520D-4CA2-ABD5-2AF30FEFB85C}|Client.csproj|solutionrelative:test_model_selection.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7D4A9AB5-520D-4CA2-ABD5-2AF30FEFB85C}|Client.csproj|c:\\users\\ljh49\\onedrive\\\uBC14\uD0D5 \uD654\uBA74\\customvvision\\client\\test_model_selection.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{7D4A9AB5-520D-4CA2-ABD5-2AF30FEFB85C}|Client.csproj|solutionrelative:test_model_selection.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{7D4A9AB5-520D-4CA2-ABD5-2AF30FEFB85C}|Client.csproj|c:\\users\\lms\\desktop\\cnn \uC774\uBBF8\uC9C0 \uBD84\uB958 \uB525\uB7EC\uB2DD \uBAA8\uB378 \uC81C\uC791 \uC11C\uBE44\uC2A4\\customvvision\\client\\models\\send_message.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D4A9AB5-520D-4CA2-ABD5-2AF30FEFB85C}|Client.csproj|solutionrelative:models\\send_message.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D4A9AB5-520D-4CA2-ABD5-2AF30FEFB85C}|Client.csproj|c:\\users\\lms\\desktop\\cnn \uC774\uBBF8\uC9C0 \uBD84\uB958 \uB525\uB7EC\uB2DD \uBAA8\uB378 \uC81C\uC791 \uC11C\uBE44\uC2A4\\customvvision\\client\\models\\receive_message.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D4A9AB5-520D-4CA2-ABD5-2AF30FEFB85C}|Client.csproj|solutionrelative:models\\receive_message.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D4A9AB5-520D-4CA2-ABD5-2AF30FEFB85C}|Client.csproj|c:\\users\\lms\\desktop\\cnn \uC774\uBBF8\uC9C0 \uBD84\uB958 \uB525\uB7EC\uB2DD \uBAA8\uB378 \uC81C\uC791 \uC11C\uBE44\uC2A4\\customvvision\\client\\models\\image.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D4A9AB5-520D-4CA2-ABD5-2AF30FEFB85C}|Client.csproj|solutionrelative:models\\image.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,113 +34,83 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Home.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\ljh49\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\CustomVVision\\Client\\Home.xaml.cs",
-              "RelativeDocumentMoniker": "Home.xaml.cs",
-              "ToolTip": "C:\\Users\\ljh49\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\CustomVVision\\Client\\Home.xaml.cs",
-              "RelativeToolTip": "Home.xaml.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAcwBcAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T19:39:34.365Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Home.xaml",
-              "DocumentMoniker": "C:\\Users\\ljh49\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\CustomVVision\\Client\\Home.xaml",
-              "RelativeDocumentMoniker": "Home.xaml",
-              "ToolTip": "C:\\Users\\ljh49\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\CustomVVision\\Client\\Home.xaml",
-              "RelativeToolTip": "Home.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-03-20T19:39:26.634Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "_Client.cs",
-              "DocumentMoniker": "C:\\Users\\ljh49\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\CustomVVision\\Client\\_Client.cs",
-              "RelativeDocumentMoniker": "_Client.cs",
-              "ToolTip": "C:\\Users\\ljh49\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\CustomVVision\\Client\\_Client.cs",
-              "RelativeToolTip": "_Client.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAAB0AAABNAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T10:17:43.735Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
               "Title": "Test_model_selection.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\ljh49\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\CustomVVision\\Client\\Test_model_selection.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\LMS\\Desktop\\CNN \uC774\uBBF8\uC9C0 \uBD84\uB958 \uB525\uB7EC\uB2DD \uBAA8\uB378 \uC81C\uC791 \uC11C\uBE44\uC2A4\\CustomVVision\\Client\\Test_model_selection.xaml.cs",
               "RelativeDocumentMoniker": "Test_model_selection.xaml.cs",
-              "ToolTip": "C:\\Users\\ljh49\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\CustomVVision\\Client\\Test_model_selection.xaml.cs",
+              "ToolTip": "C:\\Users\\LMS\\Desktop\\CNN \uC774\uBBF8\uC9C0 \uBD84\uB958 \uB525\uB7EC\uB2DD \uBAA8\uB378 \uC81C\uC791 \uC11C\uBE44\uC2A4\\CustomVVision\\Client\\Test_model_selection.xaml.cs",
               "RelativeToolTip": "Test_model_selection.xaml.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABoAAAAlAAAAAAAAAA==",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAACMAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T18:56:13.526Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Test_model_selection.xaml",
-              "DocumentMoniker": "C:\\Users\\ljh49\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\CustomVVision\\Client\\Test_model_selection.xaml",
-              "RelativeDocumentMoniker": "Test_model_selection.xaml",
-              "ToolTip": "C:\\Users\\ljh49\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\CustomVVision\\Client\\Test_model_selection.xaml",
-              "RelativeToolTip": "Test_model_selection.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-03-20T18:56:03.719Z",
+              "WhenOpened": "2025-03-21T03:38:20.853Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "Test_model.xaml",
-              "DocumentMoniker": "C:\\Users\\ljh49\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\CustomVVision\\Client\\Test_model.xaml",
+              "DocumentMoniker": "C:\\Users\\LMS\\Desktop\\CNN \uC774\uBBF8\uC9C0 \uBD84\uB958 \uB525\uB7EC\uB2DD \uBAA8\uB378 \uC81C\uC791 \uC11C\uBE44\uC2A4\\CustomVVision\\Client\\Test_model.xaml",
               "RelativeDocumentMoniker": "Test_model.xaml",
-              "ToolTip": "C:\\Users\\ljh49\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\CustomVVision\\Client\\Test_model.xaml",
+              "ToolTip": "C:\\Users\\LMS\\Desktop\\CNN \uC774\uBBF8\uC9C0 \uBD84\uB958 \uB525\uB7EC\uB2DD \uBAA8\uB378 \uC81C\uC791 \uC11C\uBE44\uC2A4\\CustomVVision\\Client\\Test_model.xaml",
               "RelativeToolTip": "Test_model.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-03-20T09:37:02.3Z",
+              "WhenOpened": "2025-03-21T03:25:26.848Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Test_model.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\ljh49\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\CustomVVision\\Client\\Test_model.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\LMS\\Desktop\\CNN \uC774\uBBF8\uC9C0 \uBD84\uB958 \uB525\uB7EC\uB2DD \uBAA8\uB378 \uC81C\uC791 \uC11C\uBE44\uC2A4\\CustomVVision\\Client\\Test_model.xaml.cs",
               "RelativeDocumentMoniker": "Test_model.xaml.cs",
-              "ToolTip": "C:\\Users\\ljh49\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\CustomVVision\\Client\\Test_model.xaml.cs",
+              "ToolTip": "C:\\Users\\LMS\\Desktop\\CNN \uC774\uBBF8\uC9C0 \uBD84\uB958 \uB525\uB7EC\uB2DD \uBAA8\uB378 \uC81C\uC791 \uC11C\uBE44\uC2A4\\CustomVVision\\Client\\Test_model.xaml.cs",
               "RelativeToolTip": "Test_model.xaml.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAcwDMAAAAOAAAAAAAAAA==",
+              "ViewState": "AgIAADMAAAAAAAAAAAAAAEAAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T09:37:01.372Z",
+              "WhenOpened": "2025-03-21T03:12:53.214Z",
               "EditorCaption": ""
-            }
-          ]
-        },
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 0,
-          "Children": [
+            },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "Receive_Message.cs",
-              "DocumentMoniker": "C:\\Users\\ljh49\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\CustomVVision\\Client\\Models\\Receive_Message.cs",
-              "RelativeDocumentMoniker": "Models\\Receive_Message.cs",
-              "ToolTip": "C:\\Users\\ljh49\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\CustomVVision\\Client\\Models\\Receive_Message.cs",
-              "RelativeToolTip": "Models\\Receive_Message.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
+              "Title": "Image.cs",
+              "DocumentMoniker": "C:\\Users\\LMS\\Desktop\\CNN \uC774\uBBF8\uC9C0 \uBD84\uB958 \uB525\uB7EC\uB2DD \uBAA8\uB378 \uC81C\uC791 \uC11C\uBE44\uC2A4\\CustomVVision\\Client\\Models\\Image.cs",
+              "RelativeDocumentMoniker": "Models\\Image.cs",
+              "ToolTip": "C:\\Users\\LMS\\Desktop\\CNN \uC774\uBBF8\uC9C0 \uBD84\uB958 \uB525\uB7EC\uB2DD \uBAA8\uB378 \uC81C\uC791 \uC11C\uBE44\uC2A4\\CustomVVision\\Client\\Models\\Image.cs",
+              "RelativeToolTip": "Models\\Image.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T19:14:59.056Z",
+              "WhenOpened": "2025-03-21T02:45:54.267Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Send_Message.cs",
+              "DocumentMoniker": "C:\\Users\\LMS\\Desktop\\CNN \uC774\uBBF8\uC9C0 \uBD84\uB958 \uB525\uB7EC\uB2DD \uBAA8\uB378 \uC81C\uC791 \uC11C\uBE44\uC2A4\\CustomVVision\\Client\\Models\\Send_Message.cs",
+              "RelativeDocumentMoniker": "Models\\Send_Message.cs",
+              "ToolTip": "C:\\Users\\LMS\\Desktop\\CNN \uC774\uBBF8\uC9C0 \uBD84\uB958 \uB525\uB7EC\uB2DD \uBAA8\uB378 \uC81C\uC791 \uC11C\uBE44\uC2A4\\CustomVVision\\Client\\Models\\Send_Message.cs",
+              "RelativeToolTip": "Models\\Send_Message.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-21T02:45:40.286Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Receive_Message.cs",
+              "DocumentMoniker": "C:\\Users\\LMS\\Desktop\\CNN \uC774\uBBF8\uC9C0 \uBD84\uB958 \uB525\uB7EC\uB2DD \uBAA8\uB378 \uC81C\uC791 \uC11C\uBE44\uC2A4\\CustomVVision\\Client\\Models\\Receive_Message.cs",
+              "RelativeDocumentMoniker": "Models\\Receive_Message.cs",
+              "ToolTip": "C:\\Users\\LMS\\Desktop\\CNN \uC774\uBBF8\uC9C0 \uBD84\uB958 \uB525\uB7EC\uB2DD \uBAA8\uB378 \uC81C\uC791 \uC11C\uBE44\uC2A4\\CustomVVision\\Client\\Models\\Receive_Message.cs",
+              "RelativeToolTip": "Models\\Receive_Message.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-21T02:44:38.857Z",
               "EditorCaption": ""
             }
           ]

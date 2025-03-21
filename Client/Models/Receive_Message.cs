@@ -11,5 +11,6 @@ namespace Client.Models
         public byte MsgId { get; set; }
         public List<string> ModelList { get; set; } = [];
         public string TestResult { get; set; }
+        public byte[] ModelFile { get; set; }
     }
 }

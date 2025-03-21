@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Client.Models;
+using WindowsAPICodePack.Dialogs;
 
 namespace Client
 {
@@ -22,17 +24,38 @@ namespace Client
     {
         public Download_model()
         {
+            Request_modelListAsync();
             InitializeComponent();
+            LV_modelList.ItemsSource = Main_Client.ModelList;
         }
 
         private void btn_dir_sel_Click(object sender, RoutedEventArgs e)
         {
+            using CommonOpenFileDialog dialog = new()
+            {
+                IsFolderPicker = true,
+            };
 
+            if (dialog.ShowDialog() == CommonFileDialogResult.Ok)
+            {
+                TBlock_dir.Text = dialog.FileName;
+            }
         }
 
         private void btn_download_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private async Task Request_modelListAsync()
+        {
+            Send_Message msg = new()
+            {
+                MsgId = (byte)Main_Client.MsgId.SHOW_MODEL_LIST,
+                UserInfo = new() { UserId = Main_Client.UserId }
+            };
+
+            await Main_Client.Send_msgAsync(msg);
         }
     }
 }

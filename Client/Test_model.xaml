@@ -31,6 +31,8 @@
             <Image  x:Name="img_testImg" HorizontalAlignment="Left" Margin="20,20,0,0" Grid.Row="1" Width="340" Grid.ColumnSpan="2" Height="210" VerticalAlignment="Top"/>
 
         </Grid>
+        <TextBlock x:Name="TBlock_modelId" HorizontalAlignment="Right" Margin="0,31,35,0" TextWrapping="Wrap"
+            VerticalAlignment="Top" FontSize="18"  Text="모델명" Width="200" TextAlignment="Right"/>
 
     </Grid>
 </Page>

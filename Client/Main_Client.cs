@@ -13,7 +13,7 @@ using Newtonsoft.Json;
 
 namespace Client
 {
-    public static class _Client
+    public static class Main_Client
     {
         //static TcpClient tc = new TcpClient("127.0.0.1", 10000);
         static TcpClient tc = new();

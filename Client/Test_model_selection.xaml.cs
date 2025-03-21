@@ -26,7 +26,7 @@ namespace Client
         {
             Request_modelListAsync();
             InitializeComponent();
-            LV_modelList.ItemsSource = _Client.ModelList;
+            LV_modelList.ItemsSource = Main_Client.ModelList;
         }
 
         private void Select_model(object sender, SelectionChangedEventArgs e)
@@ -35,17 +35,18 @@ namespace Client
                 return;
             int idx = LV_modelList.SelectedIndex;
             LV_modelList.SelectedItem = null;
+            Test_model model = new(Main_Client.ModelList[idx]);
         }
 
         private async Task Request_modelListAsync()
         {
             Send_Message msg = new()
             {
-                MsgId = (byte)_Client.MsgId.SHOW_MODEL_LIST,
-                UserInfo = new() { UserId = _Client.UserId }
+                MsgId = (byte)Main_Client.MsgId.SHOW_MODEL_LIST,
+                UserInfo = new() { UserId = Main_Client.UserId }
             };
 
-            await _Client.Send_msgAsync(msg);
+            await Main_Client.Send_msgAsync(msg);
         }
     }
 }

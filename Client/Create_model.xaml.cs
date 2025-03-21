@@ -14,6 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Client.Models;
+using WindowsAPICodePack.Dialogs;
 
 namespace Client
 {
@@ -63,13 +64,26 @@ namespace Client
 
             Send_Message msg = new()
             {
-                MsgId = (byte)_Client.MsgId.CREATE_MODEL,
-                UserInfo = new() { UserId = _Client.UserId },
+                MsgId = (byte)Main_Client.MsgId.CREATE_MODEL,
+                UserInfo = new() { UserId = Main_Client.UserId },
                 ModelInfo = model,
                 ImageInfo = images.ToList(),
             };
 
-            await _Client.Send_msgAsync(msg);
+            await Main_Client.Send_msgAsync(msg);
+        }
+
+        private void btn_selectionFile_Click(object sender, RoutedEventArgs e)
+        {
+            using CommonOpenFileDialog dialog = new()
+            {
+                IsFolderPicker = false,
+            };
+
+            if (dialog.ShowDialog() == CommonFileDialogResult.Ok)
+            {
+                //TBlock_imgUri.Text = dialog.FileName;
+            }
         }
     }
 }

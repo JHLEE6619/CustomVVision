@@ -68,12 +68,10 @@ class DBC:
             print("add_modelInfo 에러")
             print(e)
 
-        return model_dir
-
     def add_imageInfo(self, imageInfo):
         modelId = imageInfo["ModelId"]
         label = imageInfo["Label"]
-        img_dir = f'models/{modelId}/{label}'
+        img_dir = os.path.join('models',modelId,label)
 
         sql = 'INSERT INTO IMAGE VALUES (%s, %s, %s)'
         vals = (modelId, img_dir, label)
@@ -97,7 +95,10 @@ class DBC:
             print(e)
         rows = self.cursor.fetchall()
 
-        return rows # 반환 타입?
+        result = []
+        for row in rows:
+            result.append(row[0])
+        return result
 
     def select_modelDir(self, modelId):
         sql = "SELECT MODEL_DIR FROM MODEL WHERE MODEL_DIR = %s"
@@ -109,10 +110,10 @@ class DBC:
             print(e)
         row = self.cursor.fetchone()
 
-        return row
+        return row[0][0]
 
 dbc = DBC()
-userInfo = {"UserId":"LJH", "Pw" : "1234", "UserName" : "이정협"}
-
-re = dbc.login(userInfo)
+res = dbc.select_modelList("LJH")
+print(res)
+print(type(res))
 

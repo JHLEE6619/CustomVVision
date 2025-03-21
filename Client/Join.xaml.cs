@@ -45,11 +45,11 @@ namespace Client
 
             Send_Message msg = new()
             {
-                MsgId = (byte)_Client.MsgId.JOIN,
+                MsgId = (byte)Main_Client.MsgId.JOIN,
                 UserInfo = user
             };
 
-            await _Client.Send_msgAsync(msg);
+            await Main_Client.Send_msgAsync(msg);
         }
     }
 }
