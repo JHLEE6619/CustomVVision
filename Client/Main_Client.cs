@@ -27,7 +27,7 @@ namespace Client
 
         public enum MsgId : byte
         {
-            JOIN, LOGIN, CREATE_MODEL, SHOW_MODEL_LIST, TEST_MODEL, SEND_FILE, DOWNLOAD_MODEL
+            JOIN, LOGIN, CREATE_MODEL, SHOW_MODEL_LIST, TEST_MODEL, DOWNLOAD_MODEL
         }
 
         public static void ConnectServer()

@@ -1,11 +1,9 @@
 import os.path
 
-from keras.utils.image_dataset import load_image
 from sklearn.model_selection import train_test_split
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense, Dropout, Flatten, Conv2D, MaxPooling2D
 from tensorflow.keras.callbacks import ModelCheckpoint,EarlyStopping
-from tensorflow.keras.datasets import mnist
 from tensorflow.keras.utils import to_categorical
 
 import matplotlib.pyplot as plt
@@ -51,7 +49,7 @@ class CNN:
                       metrics=['accuracy'])
 
         # 모델 저장경로 설정
-        modelPath = os.path.join(modelDir, modelInfo["modelId"] + '.keras') ###
+        modelPath = os.path.join(modelDir , modelInfo["modelId"] + '.keras') ###
 
         # 모델 최적화를 위한 설정 구간입니다.
         checkpointer = ModelCheckpoint(filepath=modelPath, monitor='val_loss', verbose=1, save_best_only=True)
@@ -72,3 +70,4 @@ class CNN:
             activation = 'sigmoid'
             loss = 'binary_crossentropy'
         return activation, loss
+

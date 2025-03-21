@@ -100,20 +100,29 @@ class DBC:
             result.append(row[0])
         return result
 
-    def select_modelDir(self, modelId):
-        sql = "SELECT MODEL_DIR FROM MODEL WHERE MODEL_DIR = %s"
+    def select_modelInfo(self, modelId):
+        sql = "SELECT MODEL_DIR, IMAGE_WIDTH, IMAGE_HEIGHT, COLOR_TYPE FROM MODEL WHERE MODEL_ID = %s"
         vals = (modelId,)
         try:
             self.cursor.execute(sql,vals)
         except Exception as e:
-            print("select_modelDir 에러")
+            print("select_modelInfo 에러")
             print(e)
-        row = self.cursor.fetchone()
+        rows = self.cursor.fetchall()
+        modelInfo = {}
+        for row in rows:
+            modelInfo['ModelDir'] = row[0]
+            modelInfo['ImageWidth'] = row[1]
+            modelInfo['ImageHeight'] = row[2]
+            modelInfo['ColorType'] = row[3]
 
-        return row[0][0]
+        return modelInfo
 
 dbc = DBC()
-res = dbc.select_modelList("LJH")
+# res = dbc.select_modelList("LJH")
+res = dbc.select_modelInfo("4444")
+
 print(res)
 print(type(res))
+
 

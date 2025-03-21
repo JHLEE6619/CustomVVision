@@ -17,9 +17,10 @@ class Test:
         test_data = ((np.array(img) / 255) - 1) * -1
 
         # 모델 불러오기
-        model = load_model(modelInfo['ModelId'])
+        model = load_model(modelInfo['ModelDir'])
 
         # 클래스 예측 함수에 가공된 테스트 데이터 넣어 결과 도출
         res =(model.predict(test_data) > 0.5).astype("int32")
 
         print(res)
+
