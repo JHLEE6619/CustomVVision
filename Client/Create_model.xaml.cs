@@ -95,18 +95,17 @@ namespace Client
             await Main_Client.Send_msgAsync(msg);
         }
 
-        private void btn_selectionFile_Click(object sender, RoutedEventArgs e)
+        private void btn_fileSeletion_Click(object sender, RoutedEventArgs e)
         {
             using CommonOpenFileDialog dialog = new()
             {
                 IsFolderPicker = true,
             };
 
-            //if (dialog.ShowDialog() == CommonFileDialogResult.Ok)
-            //{
-            //    //TBlock_imgUri.Text = dialog.FileName;
-            //}
+            if (dialog.ShowDialog() == CommonFileDialogResult.Ok)
+            {
+                //TBlock_imgUri.Text = dialog.FileName;
+            }
         }
-
     }
 }

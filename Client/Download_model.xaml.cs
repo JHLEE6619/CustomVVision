@@ -24,9 +24,9 @@ namespace Client
     {
         public Download_model()
         {
-            Request_modelListAsync();
             InitializeComponent();
             LV_modelList.ItemsSource = Main_Client.ModelList;
+            Main_Client.FilePath = TBlock_dir.Text;
         }
 
         private void btn_dir_sel_Click(object sender, RoutedEventArgs e)
@@ -39,22 +39,20 @@ namespace Client
             if (dialog.ShowDialog() == CommonFileDialogResult.Ok)
             {
                 TBlock_dir.Text = dialog.FileName;
+                Main_Client.FilePath = dialog.FileName;
             }
-        }
 
-        private void btn_download_Click(object sender, RoutedEventArgs e)
-        {
 
         }
 
-        private async Task Request_modelListAsync()
+        private async void btn_download_ClickAsync(object sender, RoutedEventArgs e)
         {
+            int idx = LV_modelList.SelectedIndex;
             Send_Message msg = new()
             {
-                MsgId = (byte)Main_Client.MsgId.SHOW_MODEL_LIST,
-                UserInfo = new() { UserId = Main_Client.UserId }
+                MsgId = (byte)Main_Client.MsgId.DOWNLOAD_MODEL,
+                ModelInfo = new() { ModelId = Main_Client.ModelList[idx] }
             };
-
             await Main_Client.Send_msgAsync(msg);
         }
     }

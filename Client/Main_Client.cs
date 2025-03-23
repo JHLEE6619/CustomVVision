@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.IO;
 using System.Linq;
 using System.Net.Sockets;
 using System.Text;
@@ -22,6 +23,9 @@ namespace Client
         private static readonly object thisLock = new();
         public static List<string> ModelList { get; set; } = [];
         public static string TestResult { get; set; }
+        public static Test_model test_model;
+        public static string FilePath { get; set; }
+
 
         public static string UserId { get; set; }
 
@@ -73,6 +77,7 @@ namespace Client
                     Receive_testResult(msg.TestResult);
                     break;
                 case (byte)MsgId.DOWNLOAD_MODEL:
+                    Receive_modelFile(msg.ModelFile);
                     break;
             }
 
@@ -99,7 +104,17 @@ namespace Client
 
         private static void Receive_testResult(string testResult)
         {
-            TestResult = testResult;
+            test_model.testResult.Result = testResult;
+        }
+
+        private static void Receive_modelFile(string modelfile)
+        {
+            byte[] model = Convert.FromBase64String(modelfile);
+            using (var stream = new FileStream(FilePath+"/model.keras" , FileMode.Create, FileAccess.Write))
+            {              
+                // 파일 쓰기
+                stream.Write(model, 0, model.Length);
+            }
         }
     }
 }

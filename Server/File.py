@@ -1,10 +1,10 @@
+import base64
 import os
 import numpy as np
 import pandas as pd
 from PIL import Image
 
 class File_handler:
-    fileName = 0
 
     def makedirs(self, directory):
         if not os.path.exists(directory):
@@ -39,17 +39,15 @@ class File_handler:
         return imgList, labelList
 
     def recv_file(self, file):
-        file_name = f'{self.fileName}.jpg'
+        file_name = os.path.join("test", "test_image.jpg")
+        file = base64.b64decode(file)
         # 바이너리 파일 쓰기 모드
         with open(file_name, "wb") as f:
             f.write(file)
-        self.fileName += 1
+        # self.fileName += 1
         return file_name
 
     def send_file(self, fileName):
         with open(f"{fileName}", 'rb') as f:
-            while True:
-                data = f.read(1024)
-                if not data:
-                    break
-        return data
+            data = f.read(1024)
+        return base64.b64encode(data).decode('utf-8')

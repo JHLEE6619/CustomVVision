@@ -102,7 +102,7 @@ class DBC:
         print("모델리스트 조회 완료")
 
     def select_modelInfo(self, modelId):
-        sql = "SELECT MODEL_DIR, IMAGE_WIDTH, IMAGE_HEIGHT, COLOR_TYPE FROM MODEL WHERE MODEL_ID = %s"
+        sql = "SELECT MODEL_ID, MODEL_DIR, IMAGE_WIDTH, IMAGE_HEIGHT, COLOR_TYPE FROM MODEL WHERE MODEL_ID = %s"
         vals = (modelId,)
         try:
             self.cursor.execute(sql,vals)
@@ -110,11 +110,8 @@ class DBC:
             print("select_modelInfo 에러")
             print(e)
         row = self.cursor.fetchone()
-        modelInfo = {}
-        modelInfo['ModelDir'] = row[0]
-        modelInfo['ImageWidth'] = row[1]
-        modelInfo['ImageHeight'] = row[2]
-        modelInfo['ColorType'] = row[3]
+        modelInfo = {'ModelId': row[0], 'ModelDir': row[1], 'ImageWidth': row[2], 'ImageHeight': row[3],
+                     'ColorType': row[4]}
 
         sql2 = "SELECT LABEL FROM IMAGE WHERE MODEL_ID = %s"
         try:

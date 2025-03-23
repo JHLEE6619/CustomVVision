@@ -22,6 +22,6 @@
         </ListView>
         <Button x:Name="btn_dir_sel" FontSize="16" Width="100" Height="30" Content="경로 선택" HorizontalAlignment="Left" Margin="30,440,0,0" VerticalAlignment="Top" Click="btn_dir_sel_Click"/>
         <TextBlock x:Name="TBlock_dir" Text="C:\Users\LMS\Documents\" FontSize="16" Width="265" HorizontalAlignment="Left" Margin="155,442,0,0" TextWrapping="NoWrap" VerticalAlignment="Top"/>
-        <Button x:Name="btn_download" FontSize="16" Width="100" Height="40" Content="다운로드" HorizontalAlignment="Left" Margin="320,500,0,0" VerticalAlignment="Top" Click="btn_download_Click"/>
+        <Button x:Name="btn_download" FontSize="16" Width="100" Height="40" Content="다운로드" HorizontalAlignment="Left" Margin="320,500,0,0" VerticalAlignment="Top" Click="btn_download_ClickAsync"/>
     </Grid>
 </Page>

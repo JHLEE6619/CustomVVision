@@ -10,7 +10,7 @@
 
     <Grid Background="White">
         <TextBlock Text="Custom
-                   Vision" TextAlignment="Center" HorizontalAlignment="Center" Margin="0,120,0,0" 
+                   VVision" TextAlignment="Center" HorizontalAlignment="Center" Margin="0,120,0,0" 
                    TextWrapping="Wrap" VerticalAlignment="Top" 
                    FontSize="44" FontWeight="Bold"></TextBlock>
         <TextBlock HorizontalAlignment="Left" Margin="94,0,0,0" TextWrapping="Wrap" Text="아이디" VerticalAlignment="Center" FontSize="16"/>

@@ -27,6 +27,7 @@ namespace Client
         public Home()
         {
             InitializeComponent();
+            Request_modelListAsync();
         }
 
         private void btn_create_model_Click(object sender, RoutedEventArgs e)
@@ -37,15 +38,28 @@ namespace Client
 
         private void btn_test_model_Click(object sender, RoutedEventArgs e)
         {
+            Request_modelListAsync();
             Main_Client.TestResult = "";
-            Test_model test_Model = new();
-            this.NavigationService.Navigate(test_Model);
+            Test_model_selection page = new();
+            this.NavigationService.Navigate(page);
         }
 
         private void btn_download_model_Click(object sender, RoutedEventArgs e)
         {
+            Request_modelListAsync();
             Download_model download_Model = new();
             this.NavigationService.Navigate(download_Model);
+        }
+
+        private async Task Request_modelListAsync()
+        {
+            Send_Message msg = new()
+            {
+                MsgId = (byte)Main_Client.MsgId.SHOW_MODEL_LIST,
+                UserInfo = new() { UserId = Main_Client.UserId }
+            };
+
+            await Main_Client.Send_msgAsync(msg);
         }
     }
 }

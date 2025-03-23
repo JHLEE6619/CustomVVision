@@ -1,4 +1,5 @@
 import asyncio
+import socket
 import orjson
 import DBC
 import CNN
@@ -26,6 +27,9 @@ class ServerProtocol(asyncio.Protocol):
         peername = transport.get_extra_info('peername')
         print('Connection from {}'.format(peername))
         self.transport = transport #소켓
+        sock = self.transport.get_extra_info('socket')
+        recv_buf_size = sock.getsockopt(socket.SOL_SOCKET, socket.SO_RCVBUF)
+        print(f"리시브 버퍼 크기: {recv_buf_size} 바이트")
 
     #데이터를 수신하면 호출되는 콜백
     #data(수신된 데이터)는 이벤트 루프에서 전달된다
@@ -54,6 +58,11 @@ class ServerProtocol(asyncio.Protocol):
                 cnn.DeepLearing(msg["ModelInfo"], msg["Labels"])
                 self.dbc.add_modelInfo(msg)
                 self.dbc.add_imageInfo(msg)
+                # 생성 후 모델 정보 송신
+                modelList = self.dbc.select_modelList(msg["UserInfo"]["UserId"])
+                send_msg = {"MsgId": Msg.SHOW_MODEL_LIST, "ModelList": modelList, "TestResult": "", "ModelFile": None}
+                send_msg = orjson.dumps(send_msg)  # json 형식으로 직렬화
+                self.transport.write(send_msg)  # 데이터 송신
                 return
             case Msg.SHOW_MODEL_LIST:
                 modelList = self.dbc.select_modelList(msg["UserInfo"]["UserId"])
@@ -64,17 +73,24 @@ class ServerProtocol(asyncio.Protocol):
                 # 모델 정보 불러오기
                 modelInfo = self.dbc.select_modelInfo(msg["ModelInfo"]["ModelId"])
                 # 파일 수신 함수
-                imgPath = file.recv_file(msg["TestImg"])
+                imgPath = file.recv_file(msg["TestImage"])
                 # 테스트 하는 함수
-                test.Test_model(imgPath,modelInfo)
+                testResult = test.Test_model(imgPath,modelInfo)
+                send_msg = {"MsgId":Msg.TEST_MODEL, "ModelList":None, "TestResult":testResult, "ModelFile":None}
+                send_msg = orjson.dumps(send_msg)  # json 형식으로 직렬화
+                self.transport.write(send_msg)  # 데이터 송신
+                print("테스트 결과 전송")
+                print(send_msg)
                 return
             case Msg.DOWNLOAD_MODEL:
                 # 파일 전송 함수
-                modelDir = os.path.join('models', msg['ModelInfo']["ModelId"])
-                modelFile = file.send_file(modelDir+msg['ModelInfo']["ModelId"]+'.keras')
+                modelDir = os.path.join('models', msg['ModelInfo']["ModelId"], msg['ModelInfo']["ModelId"]+'.keras')
+                modelFile = file.send_file(modelDir)
                 send_msg = {"MsgId":Msg.DOWNLOAD_MODEL, "ModelList":None, "TestResult":"", "ModelFile":modelFile}
                 send_msg = orjson.dumps(send_msg)  # json 형식으로 직렬화
                 self.transport.write(send_msg)  # 데이터 송신
+                print("모델 다운로드")
+                print(send_msg)
                 return
 
 async def main():

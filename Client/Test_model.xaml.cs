@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -18,11 +19,28 @@ using WindowsAPICodePack.Dialogs;
 
 namespace Client
 {
+    public class TestReuslt : INotifyPropertyChanged
+    {
+        private string _result;
+        public string Result
+        {
+            get => _result;
+            set { _result = value; OnPropertyChanged(nameof(Result)); }
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+        protected void OnPropertyChanged(string propertyName)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+    }
+
     /// <summary>
     /// Test_model.xaml에 대한 상호 작용 논리
     /// </summary>
     public partial class Test_model : Page
     {
+        public TestReuslt testResult = new();
         public Test_model()
         {
             InitializeComponent();
@@ -31,6 +49,7 @@ namespace Client
         public Test_model(string modelId)
         {
             InitializeComponent();
+            this.DataContext = testResult;
             TBlock_modelId.Text = modelId;
         }
 

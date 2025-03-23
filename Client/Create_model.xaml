@@ -38,8 +38,8 @@
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Orientation="Horizontal">
-                            <TextBox Text="{Binding Name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" FontSize="14" Width="200"/>
-                            <Button Content="파일 선택" FontSize="14" Width="140" Click="btn_selectionFile_Click"/>
+                            <TextBox Text="{Binding Name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" FontSize="14" Width="150"/>
+                            <Button x:Name="btn_fileSelection" Content="파일 선택" FontSize="14" Width="120" Click="btn_fileSeletion_Click"/>
                         </StackPanel>
                     </DataTemplate>
                 </ListView.ItemTemplate>
